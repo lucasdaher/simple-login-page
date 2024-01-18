@@ -1,38 +1,213 @@
-.App {
+:root {
+  --black: #0d0d0d;
+  --background-color: var(--black);
+
+  --white: #fff;
+
+  --default-links-weight: 600;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 0 auto;
+
+  max-width: 1440px;
+  width: 100%;
+  height: 107px;
+}
+
+.links {
+  display: flex;
+  gap: 76px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: var(--default-links-weight);
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.joinBtn a {
+  text-decoration: none;
+}
+
+.joinBtn button {
+  padding: 4px 20px;
+
+  color: var(--black);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.joinBtn button:hover {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+/* Main | Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  padding: 20px;
+  margin: 77px auto;
+
+  background: #fff;
+  max-width: 479px;
+  width: 100%;
+  height: 618px;
+
+  border-radius: 12px;
+}
+
+.container .title {
+  padding: 40px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container .title h1 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container .title p {
+  width: 100%;
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.container .githubLogin {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 6px;
+  width: 359px;
+  height: 43px;
+  border-radius: 6px;
+  background: #0d0d0d;
 }
 
-.App-link {
-  color: #61dafb;
+.container .githubLogin p {
+  color: var(--white);
+  font-weight: var(--default-links-weight);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  font-weight: var(--default-links-weight);
+  margin: 32px 0;
+}
+
+.container .separator .line {
+  width: 157px;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.container .separator p {
+  color: #0d0d0d;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.6;
+}
+
+/* Form */
+.container .form {
+  margin-bottom: 50px;
+}
+.container .form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .form input {
+  width: 359px;
+  height: 43px;
+
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-weight: 500;
+  outline: 0;
+
+  text-indent: 12px;
+
+  border-radius: 6px;
+}
+
+.container .form .form-input {
+  margin: 0 0 20px 0;
+}
+
+.container .form button {
+  margin-top: 12px;
+  width: 359px;
+  height: 43px;
+  border: 0;
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: var(--default-links-weight);
+  border-radius: 6px;
+}
+
+.container .optionsForm {
+  width: 359px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .optionsForm a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.container .optionsForm a:hover {
+  text-underline-offset: 16px;
+  text-decoration: underline;
 }

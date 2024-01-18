@@ -1,23 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Header from "./components/Header";
+import LoginTitle from "./components/LoginTitle";
+import GithubLoginButton from "./components/GithubLoginButton";
+import Separator from "./components/Separator";
+import OptionsForm from "./components/OptionsForm";
+import FormInput from "./components/FormInput";
+import Button from "./components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Header */}
+      <Header />
+
+      {/* Main */}
+      <main>
+        <div className="container">
+          {/* Container */}
+          <LoginTitle />
+
+          {/* GitHub */}
+          <GithubLoginButton />
+
+          {/* Separator */}
+          <Separator />
+
+          {/* Formulário */}
+          <div className="form">
+            <form>
+              <FormInput
+                type="text"
+                name="email"
+                placeholder="Digite o seu e-mail"
+              />
+              <FormInput
+                type="password"
+                name="password"
+                placeholder="Digite a sua senha"
+              />
+              <Button text="Entrar" />
+            </form>
+          </div>
+
+          {/* Options Form */}
+          <OptionsForm />
+        </div>
+      </main>
     </div>
   );
 }
